@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.ServiceModel.Web;
 using System.Text;
 
 namespace Projektarbeit
 {
-    public class UserAccessService : IUserAccessService
+    public class AdministrationService : IAdministrationService
     {
-        public Guid Login(string username, string password)
+        public bool CreateUser<T>(T newUser)
         {
             throw new NotImplementedException();
         }
 
-        public bool Logout(Guid userIdentification)
+        public bool DeleteUser<T>(T changedUser)
         {
             throw new NotImplementedException();
         }
