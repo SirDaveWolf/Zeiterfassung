@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementierung\Administration.cs" />
+    <Compile Include="Implementierung\UserAccess.cs" />
     <Compile Include="Interfaces\IAdministration.cs" />
+    <Compile Include="Interfaces\ITimeRegistration.cs" />
     <Compile Include="Interfaces\IUserAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
