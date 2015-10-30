@@ -16,7 +16,7 @@ namespace Projektarbeit
 
         public bool DeleteUser<T>(T changedUser)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
