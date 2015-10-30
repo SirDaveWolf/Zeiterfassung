@@ -9,7 +9,7 @@ namespace Projektarbeit
 {
     public class AdministrationService : IAdministrationService
     {
-        public bool CreateUser<T>(T newUser)
+        public bool UpdateUser<T>(T newUser)
         {
             return true;
         }

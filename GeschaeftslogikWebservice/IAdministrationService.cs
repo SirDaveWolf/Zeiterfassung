@@ -11,7 +11,7 @@ namespace Projektarbeit
     public interface IAdministrationService
     {
         [OperationContract]
-        Boolean CreateUser<T>(T newUser);
+        Boolean UpdateUser<T>(T newUser);
 
         [OperationContract]
         Boolean DeleteUser<T>(T changedUser);
