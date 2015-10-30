@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.ServiceModel.Web;
 using System.Text;
 
-namespace Projektarbeit
+namespace Projektarbeit.GeschaeftslogikWebservice.Interfaces
 {
     [ServiceContract]
-    public interface IUserAccessService
+    public interface IAdministrationService
     {
         [OperationContract]
-        Guid Login(String username, String password);
+        Boolean UpdateUser<T>(T newUser);
 
         [OperationContract]
-        Boolean Logout(Guid userIdentification);
+        Boolean DeleteUser<T>(T changedUser);
     }
 }

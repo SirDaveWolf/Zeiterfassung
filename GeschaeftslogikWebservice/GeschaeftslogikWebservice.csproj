@@ -59,19 +59,19 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdministrationService.svc" />
-    <Content Include="UserAccessService.svc" />
+    <Content Include="Implementierung\AdministrationService.svc" />
+    <Content Include="Implementierung\UserAccessService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministrationService.svc.cs">
+    <Compile Include="Implementierung\AdministrationService.svc.cs">
       <DependentUpon>AdministrationService.svc</DependentUpon>
     </Compile>
-    <Compile Include="IAdministrationService.cs" />
-    <Compile Include="UserAccessService.svc.cs">
+    <Compile Include="Interfaces\IAdministrationService.cs" />
+    <Compile Include="Implementierung\UserAccessService.svc.cs">
       <DependentUpon>UserAccessService.svc</DependentUpon>
     </Compile>
-    <Compile Include="IUserAccessService.cs" />
+    <Compile Include="Interfaces\IUserAccessService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
