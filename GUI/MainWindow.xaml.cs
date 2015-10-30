@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Projektarbeit
+namespace Projektarbeit.GUI
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

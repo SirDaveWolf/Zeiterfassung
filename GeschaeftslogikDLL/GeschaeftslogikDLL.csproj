@@ -7,7 +7,7 @@
     <ProjectGuid>{AF6524B0-94AE-4B3D-9405-83D62246BABF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Projektarbeit</RootNamespace>
+    <RootNamespace>Projektarbeit.GeschaeftslogikDLL</RootNamespace>
     <AssemblyName>GeschaeftslogikDLL</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -39,8 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAdministration.cs" />
+    <Compile Include="Interfaces\IAdministration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Implementierung\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

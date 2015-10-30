@@ -7,7 +7,7 @@
     <ProjectGuid>{85D58FC6-9011-4518-BE86-CA2DE357DF24}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Projektarbeit</RootNamespace>
+    <RootNamespace>Projektarbeit.TUI</RootNamespace>
     <AssemblyName>TUI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

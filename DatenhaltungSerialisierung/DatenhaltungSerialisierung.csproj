@@ -7,7 +7,7 @@
     <ProjectGuid>{67EF274A-E72F-46E5-967D-B3CEF85E9D23}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Projektarbeit</RootNamespace>
+    <RootNamespace>Projektarbeit.DatenhaltungSerialisierung</RootNamespace>
     <AssemblyName>DatenhaltungSerialisierung</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Jsonizer.cs" />
+    <Compile Include="Utilities\Jsonizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

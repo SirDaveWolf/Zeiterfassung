@@ -7,7 +7,7 @@
     <ProjectGuid>{332C9D1C-05DE-450C-80E1-E42912BAA784}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Projektarbeit</RootNamespace>
+    <RootNamespace>Projektarbeit.GUI</RootNamespace>
     <AssemblyName>GUI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
