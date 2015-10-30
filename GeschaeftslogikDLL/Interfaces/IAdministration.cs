@@ -9,9 +9,9 @@ namespace Projektarbeit.GeschaeftslogikDLL.Interfaces
 {
     public interface IAdministration
     {
-        bool UpdateUser(User user);
-        bool DeleteUser(User user);
-        bool UpdateProject(Project project);
-        bool DeleteProject(Project project);
+        Boolean UpdateUser(User user);
+        Boolean DeleteUser(User user);
+        Boolean UpdateProject(Project project);
+        Boolean DeleteProject(Project project);
     }
 }
