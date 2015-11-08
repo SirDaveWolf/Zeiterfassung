@@ -11,6 +11,10 @@ namespace Projektarbeit.GeschaeftslogikDLL.Interfaces
     {
         Boolean UpdateWorkTime(Guid userIdentification, WorkTime workTime, Int32 projectID );
 
+        List<WorkTime> GetMyTimesForProject(Guid userIdentification, String projectName);
+
+        Dictionary<String, List<WorkTime>> GetMyWorkTimes(Guid userIdentification);
+
         List<Project> GetMyProjects(Guid userIdentification);
     }
 }

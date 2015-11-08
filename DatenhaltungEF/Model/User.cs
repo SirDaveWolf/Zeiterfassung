@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using System.ComponentModel.DataAnnotaions;
+using System.ComponentModel.DataAnnotations;
 
 namespace Projektarbeit.DatenhaltungEF.Model
 {
@@ -13,4 +13,5 @@ namespace Projektarbeit.DatenhaltungEF.Model
         [Key]
         public int UserId { get; set; }
     }
-}
+
+        
