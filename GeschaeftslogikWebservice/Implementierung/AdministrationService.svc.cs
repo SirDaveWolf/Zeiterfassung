@@ -10,14 +10,24 @@ namespace Projektarbeit.GeschaeftslogikWebservice.Implementierung
 {
     public class AdministrationService : IAdministrationService
     {
-        public bool UpdateUser<T>(T newUser)
+        public bool UpdateUser ( DatenhaltungEF.Model.User user )
         {
-            return true;
+            throw new NotImplementedException();
         }
 
-        public bool DeleteUser<T>(T changedUser)
+        public bool DeleteUser ( DatenhaltungEF.Model.User user )
         {
-            return true;
+            throw new NotImplementedException();
+        }
+
+        public bool UpdateProject ( DatenhaltungEF.Model.Project project )
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteProject ( DatenhaltungEF.Model.Project project )
+        {
+            throw new NotImplementedException();
         }
     }
 }

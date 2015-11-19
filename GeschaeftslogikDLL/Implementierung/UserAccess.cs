@@ -9,7 +9,6 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
 {
     public class UserAccess : IUserAccess
     {
-
         public Guid Login(String mail, String password)
         {
             throw new NotImplementedException();

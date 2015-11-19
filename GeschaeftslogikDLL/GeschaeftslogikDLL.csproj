@@ -46,7 +46,6 @@
     <Compile Include="Interfaces\IUserAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DatenhaltungEF\DatenhaltungEF.csproj">
       <Project>{3055a351-2e74-4855-bc07-3aa8e36527b3}</Project>
