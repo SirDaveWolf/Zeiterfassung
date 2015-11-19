@@ -13,5 +13,10 @@ namespace Projektarbeit.GeschaeftslogikDLL.Interfaces
         Boolean DeleteUser(User user);
         Boolean UpdateProject(Project project);
         Boolean DeleteProject(Project project);
+        Boolean PermitUserForProject(String mail, String projectName);
+        Boolean DenyUserForProject(String mail, String projectName);
+        List<User> GetUsers();
+        List<Project> GetProjects();
+
     }
 }
