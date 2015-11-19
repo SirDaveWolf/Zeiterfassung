@@ -28,5 +28,26 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
         {
             throw new NotImplementedException();
         }
+
+
+        public bool PermitUserForProject ( string mail, string projectName )
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DenyUserForProject ( string mail, string projectName )
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<DatenhaltungEF.Model.User> GetUsers ()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<DatenhaltungEF.Model.Project> GetProjects ()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -13,5 +13,5 @@ namespace Projektarbeit.DatenhaltungEF.Model
         [Key]
         public int UserId { get; set; }
     }
-
+}
         

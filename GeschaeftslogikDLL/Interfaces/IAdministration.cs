@@ -17,6 +17,5 @@ namespace Projektarbeit.GeschaeftslogikDLL.Interfaces
         Boolean DenyUserForProject(String mail, String projectName);
         List<User> GetUsers();
         List<Project> GetProjects();
-
     }
 }
