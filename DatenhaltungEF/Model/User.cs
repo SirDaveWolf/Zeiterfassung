@@ -10,8 +10,6 @@ namespace Projektarbeit.DatenhaltungEF.Model
 {
     public class User
     {
-        [Key]
-        public int UserId { get; set; }
     }
 }
         

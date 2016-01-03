@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Entity.cs" />
     <Compile Include="Model\Project.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\WorkTime.cs" />
