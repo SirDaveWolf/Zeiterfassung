@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbeit.DatenhaltungEF.Model
 {
-    public class WorkTime
+    public class WorkTime : Entity<Int32>
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbeit.DatenhaltungEF.Model
 {
-    public class Project
+    public class Project : Entity<Int32>
     {
     }
 }
