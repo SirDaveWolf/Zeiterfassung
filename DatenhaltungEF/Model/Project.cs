@@ -8,6 +8,7 @@ namespace Projektarbeit.DatenhaltungEF.Model
 {
     public class Project : Entity<Int32>
     {
+
     }
 }
 
