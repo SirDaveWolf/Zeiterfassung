@@ -8,5 +8,6 @@ namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
     public class User
     {
+
     }
 }
