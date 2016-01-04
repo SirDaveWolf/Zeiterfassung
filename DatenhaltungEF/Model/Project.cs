@@ -8,6 +8,14 @@ namespace Projektarbeit.DatenhaltungEF.Model
 {
     public class Project : Entity<Int32>
     {
+        public
+        String Bezeichnung { get; set; }
+
+        public
+        String Kurzbeschreibung { get; set; }
+
+        public
+        Single MaxStundensatz { get; set; }
     }
 }
 

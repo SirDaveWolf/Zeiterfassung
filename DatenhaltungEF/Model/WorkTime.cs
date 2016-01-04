@@ -8,6 +8,17 @@ namespace Projektarbeit.DatenhaltungEF.Model
 {
     public class WorkTime : Entity<Int32>
     {
+        public
+        Boolean IstAbrechenbar { get; set; }
+
+        public
+        Boolean IstReisezeit { get; set; }
+
+        public
+        DateTime Anfang { get; set; }
+
+        public
+        DateTime Ende { get; set; }
     }
 }
 
