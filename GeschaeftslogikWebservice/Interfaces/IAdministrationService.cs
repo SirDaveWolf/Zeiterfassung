@@ -11,21 +11,21 @@ namespace Projektarbeit.GeschaeftslogikWebservice.Interfaces
     [ServiceContract]
     public interface IAdministrationService
     {
-        [DataContract]
+        [OperationContract]
         Boolean UpdateUser ( User user );
-        [DataContract]
+        [OperationContract]
         Boolean DeleteUser ( User user );
-        [DataContract]
+        [OperationContract]
         Boolean UpdateProject ( Project project );
-        [DataContract]
+        [OperationContract]
         Boolean DeleteProject ( Project project );
-        [DataContract]
+        [OperationContract]
         Boolean PermitUserForProject ( String mail, String projectName );
-        [DataContract]
+        [OperationContract]
         Boolean DenyUserForProject ( String mail, String projectName );
-        [DataContract]
+        [OperationContract]
         List<User> GetUsers ();
-        [DataContract]
+        [OperationContract]
         List<Project> GetProjects ();
     }
 }
