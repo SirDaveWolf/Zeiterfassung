@@ -8,5 +8,16 @@ namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
     public class WorkTime
     {
+        public
+        Single Anfang { get; set; }
+
+        public
+        Single Ende { get; set; }
+
+        public
+        Boolean IstAbrechenbar { get; set; }
+
+        public
+        Boolean IstReisezeit { get; set; }
     }
 }

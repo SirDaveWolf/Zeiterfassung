@@ -23,7 +23,7 @@ namespace Projektarbeit.DatenhaltungEF.Model
         String Passwort { get; set; }
 
         public
-        Int32 MinArbeitszeit { get; set; }
+        Single MinArbeitszeit { get; set; }
 
         public
         Boolean IstAdmin { get; set; }

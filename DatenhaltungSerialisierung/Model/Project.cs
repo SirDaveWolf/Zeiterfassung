@@ -8,5 +8,14 @@ namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
     public class Project
     {
+        public
+        String Bezeichnung { get; set;}
+
+        public
+        String Kurzbeschreibung { get; set; }
+
+        public
+        Single MaxStundensatz { get; set; }
     }
+
 }
