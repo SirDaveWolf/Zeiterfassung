@@ -104,5 +104,10 @@ namespace Projektarbeit
             this.LoginInformation.Visibility = System.Windows.Visibility.Hidden;
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

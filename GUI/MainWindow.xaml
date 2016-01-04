@@ -25,14 +25,69 @@
                     <TextBlock HorizontalAlignment="Left" Margin="500,100,0,0" TextWrapping="Wrap" Text="Informationsfeld" VerticalAlignment="Top" Width="190" Height="125"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Admin Mitarbeiter" Visibility="Collapsed">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Admin Mitarbeiter">
+                <Grid Background="#FFE5E5E5" Margin="-10,-2,0,-12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="18*"/>
+                        <ColumnDefinition Width="741*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Liste der Mitarbeiter" HorizontalAlignment="Left" Margin="5.567,33,0,0" VerticalAlignment="Top" Grid.Column="2"/>
+                    <ListBox HorizontalAlignment="Left" Height="250" Margin="4.567,67,0,0" VerticalAlignment="Top" Width="190" Grid.Column="2"/>
+                    <Label Content="Mitarbeiter ID" HorizontalAlignment="Left" Margin="249.567,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524" Grid.Column="2"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="394.567,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Grid.Column="2"/>
+                    <Label Content="Vorname" HorizontalAlignment="Left" Margin="249.567,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524" Grid.Column="2"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="394.567,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Grid.Column="2"/>
+                    <Label Content="Nachname" HorizontalAlignment="Left" Margin="249.567,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524" Grid.Column="2"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="394.567,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Grid.Column="2"/>
+                    <Label Content="E-Mail" HorizontalAlignment="Left" Margin="249.567,190,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524" Grid.Column="2"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="394.567,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Grid.Column="2"/>
+                    <Label Content="min. Arbeitszeit" HorizontalAlignment="Left" Margin="249.567,230,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524" Grid.Column="2"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="394.567,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Grid.Column="2"/>
+                    <Label Content="Stunden" HorizontalAlignment="Left" Margin="474,230,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524" Grid.Column="2"/>
+                    <Label Content="ist Admin" HorizontalAlignment="Left" Margin="249.567,270,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524" Grid.Column="2"/>
+                    <CheckBox HorizontalAlignment="Left" Height="25" Margin="394.567,279,0,0" VerticalAlignment="Top" Width="61" Grid.Column="2"/>
+                    <Label Content="ja" HorizontalAlignment="Left" Margin="415.567,270,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524" Grid.Column="2"/>
+                    <Button Content="Neuen Mitarbeiter anlegen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Grid.Column="2" Margin="6,332,0,0" Click="Button_Click"/>
+                    <Button Content="Speichern" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Grid.Column="2" Margin="395,332,0,0" Click="Button_Click"/>
+                    <Button Content="Verwerfen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Grid.Column="2" Margin="566,332,0,0" Click="Button_Click"/>
+                    <Button Content="Ausgewählten Mitarbeiter löschen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="223" Grid.Column="2" Margin="6,379,0,0" Click="Button_Click"/>
+                    
+
+                </Grid>
             </TabItem>
-            <TabItem Header="Admin Projekte" Visibility="Collapsed">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Admin Projekte">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox HorizontalAlignment="Left" Height="250" Margin="29.567,67,0,0" VerticalAlignment="Top" Width="190"/>
+                    <Label Content="Liste der Projekte" HorizontalAlignment="Left" Margin="30.567,33,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Projekt ID" HorizontalAlignment="Left" Margin="274.567,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="419.567,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+                    <Label Content="Projektname" HorizontalAlignment="Left" Margin="274.567,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="419.567,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+                    <Label Content="Beschreibung" HorizontalAlignment="Left" Margin="274.567,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="419.567,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+                    <Label Content="Projektleiter" HorizontalAlignment="Left" Margin="274.567,190,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="419.567,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+                    <Label Content="angesetzte Zeit" HorizontalAlignment="Left" Margin="274.567,230,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="419.567,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+                    <Label Content="Stunden" HorizontalAlignment="Left" Margin="495,230,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.819,-0.524"/>
+                    <Button Content="Neues Projekt anlegen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="31,332,0,0" Click="Button_Click"/>
+                    <Button Content="Ausgewähltes Projekt löschen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="223" Margin="31,379,0,0" Click="Button_Click"/>
+                    <Button Content="Speichern" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Margin="420,332,0,0" Click="Button_Click"/>
+                    <Button Content="Verwerfen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Margin="591,332,0,0" Click="Button_Click"/>
+
+
+                </Grid>
             </TabItem>
             <TabItem Header="Optionen">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Passwort ändern" HorizontalAlignment="Left" Margin="219,49,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Altes Passwort" HorizontalAlignment="Left" Margin="31,96,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Neues Passwort" HorizontalAlignment="Left" Margin="31,142,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="178,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="178,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+                    <Button Content="Speichern" HorizontalAlignment="Left" Margin="31,219,0,0" VerticalAlignment="Top" Width="75"/>
+                </Grid>
             </TabItem>
         </TabControl>
         <Button x:Name="ButtonLogin" Content="Login" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="128" Height="24" Click="ButtonLogin_Click"/>
