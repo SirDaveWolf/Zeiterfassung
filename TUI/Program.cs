@@ -13,7 +13,6 @@ namespace Projektarbeit.TUI
         static void Main(string[] args)
         {
 
-
             while (appIsRunning)
             {
                 System.Threading.Thread.Sleep(100);
@@ -25,13 +24,13 @@ namespace Projektarbeit.TUI
                 Console.WriteLine("Bitte Passwort eingeben: ");
                 var passwort = Console.ReadLine();
 
-                //If User = Admin
+                //TODO: Login und If User = Admin
                 RenderAdminView();
 
-                //If User = User
+                //TODO: Login und If User = User
                 RenderUserView();
             }
-        }
+        } //Geht zu früh zu ?
 
         //Admin-Ansicht mit mehr Auswahlmöglichkeiten
         static void RenderAdminView()
@@ -42,6 +41,7 @@ namespace Projektarbeit.TUI
             Console.WriteLine("2 - Mitarbeiterverwaltung");
             Console.WriteLine("3 - Projektverwaltung");
             Console.WriteLine("4 - Optionen");
+            Console.WriteLine("5 - Logout");
             String auswahl = Console.ReadLine();
 
             switch (auswahl)
@@ -69,6 +69,11 @@ namespace Projektarbeit.TUI
                         RenderOptionen();
                     }
                     break;
+                case "5":
+                    {
+                        //TODO: Logout
+                    }
+                    break;
                 default:
                     {
                         RenderAdminView();
@@ -84,6 +89,7 @@ namespace Projektarbeit.TUI
             Console.WriteLine("Menü - bitte wählen Sie aus: ");
             Console.WriteLine("1 - Startseite");
             Console.WriteLine("2 - Optionen");
+            Console.WriteLine("3 - Logout");
             String auswahl = Console.ReadLine();
 
             switch (auswahl)
@@ -97,6 +103,12 @@ namespace Projektarbeit.TUI
                 case "2":
                     {
                         RenderOptionen();
+                    }
+                    break;
+
+                case "3":
+                    {
+                        //TODO: Logout
                     }
                     break;
 
@@ -134,17 +146,21 @@ namespace Projektarbeit.TUI
 
             if (richtig == "j")
             {
-                //Schreibe in die Datenbank
+                //TODO: Schreibe in die Datenbank
+                //danach RenderUserView(); ODER RenderAdminView();
+                //Success-/Failmeldung ?
             }
 
             else if (richtig == "n")
             {
                 RenderStartseite();
+                //Info, dass Werte zurückgesetzt werden ?
             }
 
             else
             {
                 RenderStartseite();
+                //Meldung unzulässige Eingabe ?
             }
         }
 
@@ -155,6 +171,7 @@ namespace Projektarbeit.TUI
             Console.WriteLine("Mitarbeiterverwaltung");
             Console.WriteLine("1 - Mitarbeiter editieren");
             Console.WriteLine("2 - Neuen Mitarbeiter anlegen");
+            Console.WriteLine("3 - Zurück zum Hauptmenü");
             var auswahlMitarbeiter = Console.ReadLine();
 
             switch(auswahlMitarbeiter)
@@ -169,9 +186,15 @@ namespace Projektarbeit.TUI
                         RenderAdminMitarbeiterNeu();
                     }
                     break;
+                case "3":
+                    {
+                        RenderAdminView();
+                    }
+                    break;
                 default:
                     {
                         RenderAdminMitarbeiterMenü();
+                        //Meldung unzulässige Eingabe ?
                     }
                     break;
             }
@@ -208,6 +231,29 @@ namespace Projektarbeit.TUI
             var minArbeitszeit = Console.ReadLine();
             Console.WriteLine("Ist Admin [j/n] ?");
             var istAdmin = Console.ReadLine();
+            Console.WriteLine(" ");
+            Console.WriteLine("Sind alle Angaben richtig [j/n] ?");
+            String richtig = Console.ReadLine();
+
+            if (richtig == "j")
+            {
+                //Schreibe in die Datenbank
+                //Success-/Failmeldung ?
+                //danach RenderAdminMitarbeiterMenü();
+                
+            }
+
+            else if (richtig == "n")
+            {
+                RenderStartseite();
+                //Info, dass Werte zurückgesetzt werden ?
+            }
+
+            else
+            {
+                RenderStartseite();
+                //Meldung unzulässige Eingabe ?
+            }
         }
 
         //seperates Menü für den Admin - Projektverwaltung
@@ -217,6 +263,7 @@ namespace Projektarbeit.TUI
             Console.WriteLine("Projektverwaltung");
             Console.WriteLine("1 - Ein Projekt bearbeiten");
             Console.WriteLine("2 - Neues Projekt anlegen");
+            Console.WriteLine("3 - Zurück zum Hauptmenü");
             var auswahlProjekt = Console.ReadLine();
 
             switch (auswahlProjekt)
@@ -231,9 +278,15 @@ namespace Projektarbeit.TUI
                         RenderAdminProjektNeu();
                     }
                     break;
+                case "3":
+                    {
+                        RenderAdminView();
+                    }
+                    break;
                 default:
                     {
                         RenderAdminProjektMenü();
+                        //Meldung unzulässige Eingabe ?
                     }
                     break;
             }
@@ -267,6 +320,29 @@ namespace Projektarbeit.TUI
             var projektleiter = Console.ReadLine();
             Console.WriteLine("angesetzte Zeit: ");
             var minArbeitszeit = Console.ReadLine();
+            Console.WriteLine(" ");
+            Console.WriteLine("Sind alle Angaben richtig [j/n] ?");
+            String richtig = Console.ReadLine();
+
+            if (richtig == "j")
+            {
+                //TODO: Schreibe in die Datenbank
+                //Success-/Failmeldung ?
+                //danach RenderAdminProjektMenü();
+                
+            }
+
+            else if (richtig == "n")
+            {
+                RenderStartseite();
+                //Info, dass Werte zurückgesetzt werden ?
+            }
+
+            else
+            {
+                RenderStartseite();
+                //Meldung unzulässige Eingabe ?
+            }
         }
 
         //Optionen mit Passwortänderung : accessed by admin and user 
@@ -278,20 +354,11 @@ namespace Projektarbeit.TUI
             var passwortAlt = Console.ReadLine();
             Console.WriteLine("Neues Passwort eingeben: ");
             var passwortNeu = Console.ReadLine();
+            
+            //TODO: Schreibe in die Datenbank
+            //Success-/Failmeldung ?
+            //RenderUserView(); ODER RenderAdminView();
         }
 
-        static void HandleInput()
-        {
-            var info = Console.ReadLine();
-
-            if (info.Contains("ja"))
-            {
-            }
-
-            if (info.Contains("exit"))
-            {
-                appIsRunning = false;
-            }
-        }
     }
 }
