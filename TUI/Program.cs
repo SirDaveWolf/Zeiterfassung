@@ -33,6 +33,7 @@ namespace Projektarbeit.TUI
             }
         }
 
+        //Admin-Ansicht mit mehr Auswahlmöglichkeiten
         static void RenderAdminView()
         {
             Console.Clear();
@@ -76,6 +77,7 @@ namespace Projektarbeit.TUI
             }
         }
 
+        //User-Ansicht mit den Standard-Auswahlmöglichkeiten
         static void RenderUserView()
         {
             Console.Clear();
@@ -106,6 +108,7 @@ namespace Projektarbeit.TUI
             }
         }
 
+        //Startseite mit Zeiterfassung : accessed by admin and user
         static void RenderStartseite() 
         {
             
@@ -145,6 +148,7 @@ namespace Projektarbeit.TUI
             }
         }
 
+        //seperates Menü für den Admin - Mitarbeiterverwaltung
         static void RenderAdminMitarbeiterMenü()
         {
             Console.Clear();
@@ -174,6 +178,7 @@ namespace Projektarbeit.TUI
 
         }
 
+        //Mitarbeitereditor
         static void RenderAdminMitarbeiterEdit()
         {
             Console.Clear();
@@ -187,6 +192,7 @@ namespace Projektarbeit.TUI
             var selectedMitarbeiter = Mitarbeiter[input];*/
         }
 
+        //neuen Mitarbeiter anlegen
         static void RenderAdminMitarbeiterNeu()
         {
             Console.Clear();
@@ -204,6 +210,7 @@ namespace Projektarbeit.TUI
             var istAdmin = Console.ReadLine();
         }
 
+        //seperates Menü für den Admin - Projektverwaltung
         static void RenderAdminProjektMenü()
         {
             Console.Clear();
@@ -232,6 +239,7 @@ namespace Projektarbeit.TUI
             }
         }
 
+        //Projekteditor
         static void RenderAdminProjektEdit()
         {
             Console.Clear();
@@ -245,6 +253,7 @@ namespace Projektarbeit.TUI
             var selectedProject = Projects[input];*/
         }
 
+        //neues Projekt anlegen
         static void RenderAdminProjektNeu()
         {
             Console.Clear();
@@ -260,6 +269,7 @@ namespace Projektarbeit.TUI
             var minArbeitszeit = Console.ReadLine();
         }
 
+        //Optionen mit Passwortänderung : accessed by admin and user 
         static void RenderOptionen()
         {
             Console.Clear();
