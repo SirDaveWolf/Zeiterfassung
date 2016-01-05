@@ -26,11 +26,10 @@ namespace Projektarbeit.TUI
                 var passwort = Console.ReadLine();
 
                 //If User = Admin
-
                 RenderAdminView();
 
                 //If User = User
-                HandleInput();
+                RenderUserView();
             }
         }
 
@@ -72,6 +71,36 @@ namespace Projektarbeit.TUI
                 default:
                     {
                         RenderAdminView();
+                    }
+                    break;
+            }
+        }
+
+        static void RenderUserView()
+        {
+            Console.Clear();
+            Console.WriteLine("Menü - bitte wählen Sie aus: ");
+            Console.WriteLine("1 - Startseite");
+            Console.WriteLine("2 - Optionen");
+            String auswahl = Console.ReadLine();
+
+            switch (auswahl)
+            {
+                case "1":
+                    {
+                        RenderStartseite();
+                    }
+                    break;
+
+                case "2":
+                    {
+                        RenderOptionen();
+                    }
+                    break;
+
+                default:
+                    {
+                        RenderUserView();
                     }
                     break;
             }
