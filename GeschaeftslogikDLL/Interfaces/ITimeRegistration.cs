@@ -1,4 +1,5 @@
 ﻿using Projektarbeit.DatenhaltungEF.Model;
+using Projektarbeit.DatenhaltungSerialisierung.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,12 @@ namespace Projektarbeit.GeschaeftslogikDLL.Interfaces
 {
     public interface ITimeRegistration
     {
-        Boolean UpdateWorkTime(Guid userIdentification, WorkTime workTime, Int32 projectID );
+        Boolean UpdateWorkTime(Guid userIdentification, IWorkTime workTime, Int32 projectID );
 
-        List<WorkTime> GetMyTimesForProject(Guid userIdentification, String projectName);
+        List<IWorkTime> GetMyTimesForProject ( Guid userIdentification, String projectName );
 
-        Dictionary<String, List<WorkTime>> GetMyWorkTimes(Guid userIdentification);
+        Dictionary<String, List<IWorkTime>> GetMyWorkTimes ( Guid userIdentification );
 
-        List<Project> GetMyProjects(Guid userIdentification);
+        List<IProject> GetMyProjects(Guid userIdentification);
     }
 }

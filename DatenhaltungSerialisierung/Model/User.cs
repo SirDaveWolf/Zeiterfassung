@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
-    public class User
+    public class User : IUser
     {
+        public
+        Guid Id { get; set; }
+
         public
         String Name { get; set; }
 

@@ -9,6 +9,9 @@ namespace Projektarbeit.DatenhaltungEF.Model
     public class WorkTime : Entity<Int32>
     {
         public
+        Guid Id { get; set; }
+
+        public
         Boolean IstAbrechenbar { get; set; }
 
         public

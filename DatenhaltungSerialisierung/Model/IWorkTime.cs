@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
-    public class WorkTime
+    public interface IWorkTime
     {
         public
         Guid Id { get; set; }

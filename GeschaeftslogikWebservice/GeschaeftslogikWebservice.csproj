@@ -90,6 +90,10 @@
       <Project>{3055a351-2e74-4855-bc07-3aa8e36527b3}</Project>
       <Name>DatenhaltungEF</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DatenhaltungSerialisierung\DatenhaltungSerialisierung.csproj">
+      <Project>{67ef274a-e72f-46e5-967d-b3cef85e9d23}</Project>
+      <Name>DatenhaltungSerialisierung</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

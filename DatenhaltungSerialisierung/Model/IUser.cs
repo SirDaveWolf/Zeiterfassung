@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
-using System.ComponentModel.DataAnnotations;
 
-namespace Projektarbeit.DatenhaltungEF.Model
+namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
-    public class User : Entity<Int32>
+    public interface IUser
     {
         public
         Guid Id { get; set; }
@@ -32,4 +30,3 @@ namespace Projektarbeit.DatenhaltungEF.Model
         Boolean IstAdmin { get; set; }
     }
 }
-        

@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\IDataFileManagement.cs" />
+    <Compile Include="Model\IProject.cs" />
     <Compile Include="Model\DataFileManagement.cs" />
+    <Compile Include="Model\IUser.cs" />
+    <Compile Include="Model\IWorkTime.cs" />
     <Compile Include="Model\Project.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\WorkTime.cs" />
+    <Compile Include="Utilities\Datenhaltungstyp.cs" />
     <Compile Include="Utilities\Jsonizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

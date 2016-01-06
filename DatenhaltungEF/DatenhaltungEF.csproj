@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Database.cs" />
+    <Compile Include="Model\EFWrapper.cs" />
     <Compile Include="Model\Entity.cs" />
     <Compile Include="Model\Project.cs" />
     <Compile Include="Model\User.cs" />
@@ -60,6 +61,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatenhaltungSerialisierung\DatenhaltungSerialisierung.csproj">
+      <Project>{67ef274a-e72f-46e5-967d-b3cef85e9d23}</Project>
+      <Name>DatenhaltungSerialisierung</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

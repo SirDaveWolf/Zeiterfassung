@@ -1,4 +1,5 @@
-﻿using Projektarbeit.GeschaeftslogikDLL.Interfaces;
+﻿using Projektarbeit.DatenhaltungSerialisierung.Utilities;
+using Projektarbeit.GeschaeftslogikDLL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,14 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
 {
     public class UserAccess : IUserAccess
     {
+        private
+        DataManagementType dataholding;
+
+        public UserAccess ( DataManagementType type )
+        {
+            dataholding = type;
+        }
+
         public Guid Login(String mail, String password)
         {
             throw new NotImplementedException();

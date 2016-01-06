@@ -48,10 +48,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DatenhaltungSerialisierung\DatenhaltungSerialisierung.csproj">
+      <Project>{67ef274a-e72f-46e5-967d-b3cef85e9d23}</Project>
+      <Name>DatenhaltungSerialisierung</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GeschaeftslogikDLL\GeschaeftslogikDLL.csproj">
       <Project>{af6524b0-94ae-4b3d-9405-83d62246babf}</Project>
       <Name>GeschaeftslogikDLL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
