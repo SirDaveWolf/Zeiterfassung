@@ -10,8 +10,11 @@ namespace Projektarbeit.DatenhaltungEF.Model
 {
     public class User : Entity<Int32>
     {
-        public
-        Guid Id { get; set; }
+        public virtual
+        List<WorkTime> WorkTimes { get; set; }
+
+        public virtual
+        List<Project> Projects { get; set; }
 
         public
         String Name { get; set; }

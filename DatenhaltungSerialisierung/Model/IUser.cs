@@ -9,9 +9,6 @@ namespace Projektarbeit.DatenhaltungSerialisierung.Model
     public interface IUser
     {
         public
-        Guid Id { get; set; }
-
-        public
         String Name { get; set; }
 
         public

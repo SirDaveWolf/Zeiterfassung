@@ -9,6 +9,9 @@ namespace Projektarbeit.DatenhaltungEF.Model
 {
     public class Project : Entity<Int32>, IProject
     {
+        public virtual
+        List<User> Users { get; set; }
+
         public
         String Bezeichnung { get; set; }
 

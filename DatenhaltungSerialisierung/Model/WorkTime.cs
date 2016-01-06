@@ -12,10 +12,10 @@ namespace Projektarbeit.DatenhaltungSerialisierung.Model
         Guid Id { get; set; }
 
         public
-        Single Anfang { get; set; }
+        DateTime Anfang { get; set; }
 
         public
-        Single Ende { get; set; }
+        DateTime Ende { get; set; }
 
         public
         Boolean IstAbrechenbar { get; set; }
