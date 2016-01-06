@@ -9,6 +9,12 @@ namespace Projektarbeit.DatenhaltungEF.Model
 {
     public class Database : DbContext 
     {
+        public
+        Database ()
+            : base( "DatenbankConnectionString" )
+        {
+        }
+
         public virtual
         DbSet<User> Users { get; set; }
 

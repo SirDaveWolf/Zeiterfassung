@@ -43,6 +43,7 @@
     <Compile Include="Implementierung\TimeRegistration.cs" />
     <Compile Include="Implementierung\UserAccess.cs" />
     <Compile Include="Interfaces\IAdministration.cs" />
+    <Compile Include="Interfaces\IProjectManagement.cs" />
     <Compile Include="Interfaces\ITimeRegistration.cs" />
     <Compile Include="Interfaces\IUserAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
