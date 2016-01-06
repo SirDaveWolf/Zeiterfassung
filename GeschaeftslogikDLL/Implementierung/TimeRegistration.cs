@@ -1,4 +1,5 @@
-﻿using Projektarbeit.DatenhaltungSerialisierung.Model;
+﻿using Projektarbeit.DatenhaltungEF.Model;
+using Projektarbeit.DatenhaltungSerialisierung.Model;
 using Projektarbeit.DatenhaltungSerialisierung.Utilities;
 using Projektarbeit.GeschaeftslogikDLL.Interfaces;
 using System;
@@ -12,11 +13,15 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
     public class TimeRegistration : ITimeRegistration
     {
         private
-        DataManagementType dataholding;
+        IDataFileManagement dataManagement;
 
         public TimeRegistration ( DataManagementType type )
         {
-            dataholding = type;
+            if ( type == DataManagementType.EntityFramework )
+                dataManagement = new EFWrapper();
+
+            if ( type == DataManagementType.Json )
+                dataManagement = new DataFileManagement();
         }
 
         public bool UpdateWorkTime ( Guid userIdentification, IWorkTime workTime, int projectID )

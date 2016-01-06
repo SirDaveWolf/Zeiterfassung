@@ -1,4 +1,6 @@
-﻿using Projektarbeit.DatenhaltungSerialisierung.Utilities;
+﻿using Projektarbeit.DatenhaltungEF.Model;
+using Projektarbeit.DatenhaltungSerialisierung.Model;
+using Projektarbeit.DatenhaltungSerialisierung.Utilities;
 using Projektarbeit.GeschaeftslogikDLL.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -11,21 +13,25 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
     public class UserAccess : IUserAccess
     {
         private
-        DataManagementType dataholding;
+        IDataFileManagement dataManagement;
 
         public UserAccess ( DataManagementType type )
         {
-            dataholding = type;
+            if ( type == DataManagementType.EntityFramework )
+                dataManagement = new EFWrapper();
+
+            if ( type == DataManagementType.Json )
+                dataManagement = new DataFileManagement();
         }
 
-        public Guid Login(String mail, String password)
+        public IUser Login(String mail, String password)
         {
             throw new NotImplementedException();
         }
 
-        public Boolean Logout(Guid userIdentification)
+        public Boolean Logout(String EMail)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

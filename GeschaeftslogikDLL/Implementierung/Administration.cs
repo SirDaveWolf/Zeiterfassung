@@ -57,12 +57,12 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
 
         public List<IUser> GetUsers ()
         {
-            throw new NotImplementedException();
+            return dataManagement.GetAllUsers();
         }
 
         public List<IProject> GetProjects ()
         {
-            throw new NotImplementedException();
+            return dataManagement.GetAllProjects();
         }
     }
 }
