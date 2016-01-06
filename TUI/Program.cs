@@ -136,7 +136,7 @@ namespace Projektarbeit.TUI
             var selectedProject = Projects[ input ];*/
 
             Console.WriteLine("Um welche Uhrzeit wurde mit der Arbeit begonnen?");
-            var anfang = Console.ReadLine();
+            var anfang = DateTime.Parse(Console.ReadLine());
             Console.WriteLine("Ist diese Zeit abrechenbar [j/n] ?");
             var istAbrechenbar = Console.ReadLine();
             Console.WriteLine("Um welche Uhrzeit wurde die Arbeit beendet?");
@@ -148,20 +148,36 @@ namespace Projektarbeit.TUI
             if (richtig == "j")
             {
                 //TODO: Schreibe in die Datenbank
-                //danach RenderUserView(); ODER RenderAdminView();
-                //Success-/Failmeldung ?
+                //Success-/Failmeldung
+                Console.WriteLine("Eintrag erfolgreich geschrieben!");
+                Console.ReadKey();
+
+                Console.WriteLine("Es ist ein Fehler aufgetreten");
+                Console.ReadKey();
+
+                /*if (istAdmin == true) 
+                {
+                    RenderAdminView();
+                }
+                */
+
+                /*
+                 else
+                 * {
+                 *  RenderUserView();
+                 * }
+                 */
+                
             }
 
             else if (richtig == "n")
             {
                 RenderStartseite();
-                //Info, dass Werte zurückgesetzt werden ?
             }
 
             else
             {
                 RenderStartseite();
-                //Meldung unzulässige Eingabe ?
             }
         }
 
@@ -195,7 +211,6 @@ namespace Projektarbeit.TUI
                 default:
                     {
                         RenderAdminMitarbeiterMenü();
-                        //Meldung unzulässige Eingabe ?
                     }
                     break;
             }
@@ -214,6 +229,62 @@ namespace Projektarbeit.TUI
             }
             Int32 input = Convert.ToInt32(Console.ReadLine());
             var selectedMitarbeiter = Mitarbeiter[input];*/
+
+            //Datenbank - dazugehörigen Datensatz laden
+            Console.WriteLine("1 " + user.Name);
+            Console.WriteLine("2 " + user.Vorname);
+            Console.WriteLine("3 " + user.EMail);
+            Console.WriteLine("4 " + user.Passwort);
+            Console.WriteLine("5 " + user.MinArbeitszeit);
+            Console.WriteLine("6 " + user.IstAdmin);
+            Console.WriteLine("");
+            Console.WriteLine("Bitte wählen Sie aus was geändert werden soll: ");
+            var auswahlChanges = Console.ReadLine();
+            switch (auswahlChanges)
+            {
+                case "1":
+                    {
+                        Console.WriteLine("Bitte neuen Namen eingeben: ");
+                        var newUserName = Console.ReadLine();
+                    }
+                    break;
+
+                case "2":
+                    {
+                        Console.WriteLine("Bitte neuen Vornamen eingeben: ");
+                        var neueUserVorname = Console.ReadLine();
+                    }
+                    break;
+
+                case "3":
+                    {
+                        Console.WriteLine("Bitte die neue Email-Adresse eingeben: ");
+                        var newUserMail = Console.ReadLine();
+                    }
+                    break;
+
+                case "4":
+                    {
+                        Console.WriteLine("Bitte das neue Passwort eingeben: ");
+                        var newUserPasswort = Console.ReadLine();
+                    }
+                    break;
+
+                case "5":
+                    {
+                        Console.WriteLine("Bitte die neue Mindestarbeitszeit eingeben: ");
+                        var newUserArbeitszeit = Console.ReadLine();
+                    }
+                    break;
+
+                case "6":
+                    {
+                        Console.WriteLine("Adminrolle vergeben [j/n] ? ");
+                        var newUserAdmin = Console.ReadLine();
+                    }
+                    break;
+
+            }
         }
 
         //neuen Mitarbeiter anlegen
@@ -239,7 +310,13 @@ namespace Projektarbeit.TUI
             if (richtig == "j")
             {
                 //Schreibe in die Datenbank
-                //Success-/Failmeldung ?
+
+                Console.WriteLine("Eintrag erfolgreich geschrieben!");
+                Console.ReadKey();
+                //danach RenderAdminMitarbeiterMenü();
+
+                Console.WriteLine("Es ist ein Fehler aufgetreten");
+                Console.ReadKey();
                 //danach RenderAdminMitarbeiterMenü();
                 
             }
@@ -247,13 +324,11 @@ namespace Projektarbeit.TUI
             else if (richtig == "n")
             {
                 RenderStartseite();
-                //Info, dass Werte zurückgesetzt werden ?
             }
 
             else
             {
                 RenderStartseite();
-                //Meldung unzulässige Eingabe ?
             }
         }
 
@@ -287,7 +362,6 @@ namespace Projektarbeit.TUI
                 default:
                     {
                         RenderAdminProjektMenü();
-                        //Meldung unzulässige Eingabe ?
                     }
                     break;
             }
@@ -305,6 +379,38 @@ namespace Projektarbeit.TUI
             }
             Int32 input = Convert.ToInt32(Console.ReadLine());
             var selectedProject = Projects[input];*/
+
+            //Datenbank - dazugehörigen Datensatz laden
+            Console.WriteLine("1 " + project.Bezeichnung);
+            Console.WriteLine("2 " + project.Kurzbeschreibung);
+            Console.WriteLine("3 " + project.MaxStundensatz);
+            Console.WriteLine("");
+            Console.WriteLine("Bitte wählen Sie aus was geändert werden soll: ");
+            var auswahlChanges = Console.ReadLine();
+            switch (auswahlChanges)
+                {
+                case "1":
+                        {
+                            Console.WriteLine("Bitte neue Bezeichnung eingeben: ");
+                            var neueProjektBez = Console.ReadLine();
+                        }
+                    break;
+
+                case "2":
+                        {
+                            Console.WriteLine("Bitte neue Kurzbeschreibung eingeben: ");
+                            var neueProjektKurz = Console.ReadLine();
+                        }
+                    break;
+
+                case "3":
+                    {
+                        Console.WriteLine("Bitte den neuen maximalen Stundensatz eingeben: ");
+                        var neuerMaxStundensatz = Console.ReadLine();
+                    }
+                    break;
+
+                }
         }
 
         //neues Projekt anlegen
@@ -328,7 +434,14 @@ namespace Projektarbeit.TUI
             if (richtig == "j")
             {
                 //TODO: Schreibe in die Datenbank
-                //Success-/Failmeldung ?
+
+                //Success-/Failmeldung
+                Console.WriteLine("Eintrag erfolgreich geschrieben!");
+                Console.ReadKey();
+                //danach RenderAdminProjektMenü();
+
+                Console.WriteLine("Es ist ein Fehler aufgetreten");
+                Console.ReadKey();
                 //danach RenderAdminProjektMenü();
                 
             }
@@ -336,13 +449,11 @@ namespace Projektarbeit.TUI
             else if (richtig == "n")
             {
                 RenderStartseite();
-                //Info, dass Werte zurückgesetzt werden ?
             }
 
             else
             {
                 RenderStartseite();
-                //Meldung unzulässige Eingabe ?
             }
         }
 
@@ -357,7 +468,14 @@ namespace Projektarbeit.TUI
             var passwortNeu = Console.ReadLine();
             
             //TODO: Schreibe in die Datenbank
-            //Success-/Failmeldung ?
+
+            //Success-/Failmeldung
+            Console.WriteLine("Eintrag erfolgreich geschrieben!");
+            Console.ReadKey();
+            //RenderUserView(); ODER RenderAdminView();
+
+            Console.WriteLine("Es ist ein Fehler aufgetreten");
+            Console.ReadKey();
             //RenderUserView(); ODER RenderAdminView();
         }
 
