@@ -134,6 +134,7 @@ namespace Projektarbeit.TUI
                 }
             Int32 input = Convert.ToInt32( Console.ReadLine() );
             var selectedProject = Projects[ input ];*/
+
             Console.WriteLine("Um welche Uhrzeit wurde mit der Arbeit begonnen?");
             var anfang = Console.ReadLine();
             Console.WriteLine("Ist diese Zeit abrechenbar [j/n] ?");
