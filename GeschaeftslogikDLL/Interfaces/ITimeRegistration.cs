@@ -10,12 +10,12 @@ namespace Projektarbeit.GeschaeftslogikDLL.Interfaces
 {
     public interface ITimeRegistration
     {
-        Boolean UpdateWorkTime(Guid userIdentification, IWorkTime workTime, Int32 projectID );
+        Boolean UpdateWorkTime(String userMail, IWorkTime workTime, String projectDescription );
 
-        List<IWorkTime> GetMyTimesForProject ( Guid userIdentification, String projectName );
+        List<IWorkTime> GetMyTimesForProject ( String userMail, String projectName );
 
-        Dictionary<String, List<IWorkTime>> GetMyWorkTimes ( Guid userIdentification );
+        Dictionary<String, List<IWorkTime>> GetMyWorkTimes ( String userMail );
 
-        List<IProject> GetMyProjects(Guid userIdentification);
+        List<IProject> GetMyProjects ( String userMail );
     }
 }

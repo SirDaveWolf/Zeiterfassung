@@ -11,6 +11,9 @@ namespace Projektarbeit.DatenhaltungEF.Model
         public virtual
         User User { get; set; }
 
+        public virtual
+        Project Project { get; set; }
+
         public
         Guid Id { get; set; }
 

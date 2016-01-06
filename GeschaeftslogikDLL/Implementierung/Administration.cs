@@ -44,15 +44,14 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
             return dataManagement.DeleteProject( project.Kurzbeschreibung );
         }
 
-
         public bool PermitUserForProject ( string mail, string projectName )
         {
-            return true;
+            return dataManagement.PermitUserToProject( mail, projectName );
         }
 
         public bool DenyUserForProject ( string mail, string projectName )
         {
-            throw new NotImplementedException();
+            return dataManagement.DenyUserToProject( mail, projectName );
         }
 
         public List<IUser> GetUsers ()

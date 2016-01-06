@@ -12,6 +12,9 @@ namespace Projektarbeit.DatenhaltungEF.Model
         public virtual
         List<User> Users { get; set; }
 
+        public virtual
+        List<WorkTime> WorkTimes { get; set; }
+
         public
         String Bezeichnung { get; set; }
 

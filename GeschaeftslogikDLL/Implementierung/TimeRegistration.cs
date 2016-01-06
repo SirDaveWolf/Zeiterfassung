@@ -24,22 +24,21 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
                 dataManagement = new DataFileManagement();
         }
 
-        public bool UpdateWorkTime ( Guid userIdentification, IWorkTime workTime, int projectID )
+        public bool UpdateWorkTime ( string userMail, IWorkTime workTime, string projectDescription )
+        {
+        }
+
+        public List<IWorkTime> GetMyTimesForProject ( string userMail, string projectName )
         {
             throw new NotImplementedException();
         }
 
-        public List<IWorkTime> GetMyTimesForProject ( Guid userIdentification, string projectName )
+        public Dictionary<string, List<IWorkTime>> GetMyWorkTimes ( string userMail )
         {
             throw new NotImplementedException();
         }
 
-        public Dictionary<string, List<IWorkTime>> GetMyWorkTimes ( Guid userIdentification )
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<IProject> GetMyProjects ( Guid userIdentification )
+        public List<IProject> GetMyProjects ( string userMail )
         {
             throw new NotImplementedException();
         }
