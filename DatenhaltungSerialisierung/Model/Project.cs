@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
-    public class Project
+    public class Project : IProject
     {
         public
-        String Bezeichnung { get; set;}
+        String Bezeichnung { get; set; }
 
         public
         String Kurzbeschreibung { get; set; }

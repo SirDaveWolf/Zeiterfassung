@@ -158,7 +158,7 @@ namespace Projektarbeit.TUI
                 /*if (istAdmin == true) 
                 {
                     RenderAdminView();
-                }
+            }
                 */
 
                 /*

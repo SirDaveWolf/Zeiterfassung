@@ -1,17 +1,13 @@
-﻿using Projektarbeit.DatenhaltungSerialisierung.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projektarbeit.DatenhaltungEF.Model
+namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
-    public class Project : Entity<Int32>, IProject
+    public interface IProject
     {
-        public virtual
-        List<User> Users { get; set; }
-
         public
         String Bezeichnung { get; set; }
 
@@ -22,5 +18,3 @@ namespace Projektarbeit.DatenhaltungEF.Model
         Single MaxStundensatz { get; set; }
     }
 }
-
-

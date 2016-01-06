@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
-    public class User : IUser
+    public interface IUser
     {
         public
         String Name { get; set; }

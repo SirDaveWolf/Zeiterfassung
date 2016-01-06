@@ -8,6 +8,12 @@ namespace Projektarbeit.DatenhaltungEF.Model
 {
     public class WorkTime : Entity<Int32>
     {
+        public virtual
+        User User { get; set; }
+
+        public
+        Guid Id { get; set; }
+
         public
         Boolean IstAbrechenbar { get; set; }
 

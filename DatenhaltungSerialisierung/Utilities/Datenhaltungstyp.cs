@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projektarbeit.GeschaeftslogikDLL.Interfaces
+namespace Projektarbeit.DatenhaltungSerialisierung.Utilities
 {
-    interface IProjectManagement
+    public enum DataManagementType
     {
+        EntityFramework,
+        Json
     }
 }

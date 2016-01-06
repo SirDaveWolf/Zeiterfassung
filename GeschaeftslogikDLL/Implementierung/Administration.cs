@@ -1,4 +1,7 @@
-﻿using Projektarbeit.GeschaeftslogikDLL.Interfaces;
+﻿using Projektarbeit.DatenhaltungEF.Model;
+using Projektarbeit.DatenhaltungSerialisierung.Model;
+using Projektarbeit.DatenhaltungSerialisierung.Utilities;
+using Projektarbeit.GeschaeftslogikDLL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,30 +12,42 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
 {
     public class Administration : IAdministration
     {
-        public bool UpdateUser(DatenhaltungEF.Model.User user)
+        private
+        IDataFileManagement dataManagement;
+
+        public Administration ( DataManagementType type )
         {
-            throw new NotImplementedException();
+            if ( type == DataManagementType.EntityFramework )
+                dataManagement = new EFWrapper();
+
+            if ( type == DataManagementType.Json )
+                dataManagement = new DataFileManagement();
         }
 
-        public bool DeleteUser(DatenhaltungEF.Model.User user)
+        public bool UpdateUser ( IUser user )
         {
-            throw new NotImplementedException();
+            return dataManagement.WriteUser( user );
         }
 
-        public bool UpdateProject(DatenhaltungEF.Model.Project project)
+        public bool DeleteUser ( IUser user )
         {
-            throw new NotImplementedException();
+            return dataManagement.DeleteUser( user.EMail );
         }
 
-        public bool DeleteProject(DatenhaltungEF.Model.Project project)
+        public bool UpdateProject ( IProject project )
         {
-            throw new NotImplementedException();
+            return dataManagement.WriteProject( project );
+        }
+
+        public bool DeleteProject ( IProject project )
+        {
+            return dataManagement.DeleteProject( project.Kurzbeschreibung );
         }
 
 
         public bool PermitUserForProject ( string mail, string projectName )
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public bool DenyUserForProject ( string mail, string projectName )
@@ -40,14 +55,14 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
             throw new NotImplementedException();
         }
 
-        public List<DatenhaltungEF.Model.User> GetUsers ()
+        public List<IUser> GetUsers ()
         {
-            throw new NotImplementedException();
+            return dataManagement.GetAllUsers();
         }
 
-        public List<DatenhaltungEF.Model.Project> GetProjects ()
+        public List<IProject> GetProjects ()
         {
-            throw new NotImplementedException();
+            return dataManagement.GetAllProjects();
         }
     }
 }
