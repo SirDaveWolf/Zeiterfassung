@@ -26,7 +26,7 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
 
         public IUser Login(String mail, String password)
         {
-            throw new NotImplementedException();
+            return dataManagement.ReadUser( mail );
         }
 
         public Boolean Logout(String EMail)
