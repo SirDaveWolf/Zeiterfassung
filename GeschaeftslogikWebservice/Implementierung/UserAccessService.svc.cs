@@ -1,4 +1,7 @@
 ﻿using Projektarbeit.GeschaeftslogikWebservice.Interfaces;
+using Projektarbeit.DatenhaltungSerialisierung.Utilities;
+using Projektarbeit.DatenhaltungSerialisierung.Model;
+using Projektarbeit.DatenhaltungEF.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +14,28 @@ namespace Projektarbeit.GeschaeftslogikWebservice.Implementierung
 {
     public class UserAccessService : IUserAccessService
     {
-        public Guid Login(string username, string password)
+        private
+        IDataFileManagement dataManagement;
+
+        public UserAccessService ( DataManagementType type )
         {
-            throw new NotImplementedException();
+            if ( type == DataManagementType.EntityFramework )
+                dataManagement = new EFWrapper();
+
+            if ( type == DataManagementType.Json )
+                dataManagement = new DataFileManagement();
+
         }
 
-        public bool Logout(Guid userIdentification)
+        public IUser Login(string mail, string password)
         {
-            throw new NotImplementedException();
+            return dataManagement.ReadUser(mail);
+        }
+
+        public bool Logout(String EMail)
+        {
+            return true;
         }
     }
+
 }

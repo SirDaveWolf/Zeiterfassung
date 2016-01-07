@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Implementierung\AdministrationService.svc" />
+    <Content Include="Implementierung\TimeRegistrationService.svc" />
     <Content Include="Implementierung\UserAccessService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -67,10 +68,14 @@
     <Compile Include="Implementierung\AdministrationService.svc.cs">
       <DependentUpon>AdministrationService.svc</DependentUpon>
     </Compile>
+    <Compile Include="Implementierung\TimeRegistrationService.svc.cs">
+      <DependentUpon>TimeRegistrationService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IAdministrationService.cs" />
     <Compile Include="Implementierung\UserAccessService.svc.cs">
       <DependentUpon>UserAccessService.svc</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\ITimeRegistrationService.cs" />
     <Compile Include="Interfaces\IUserAccessService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

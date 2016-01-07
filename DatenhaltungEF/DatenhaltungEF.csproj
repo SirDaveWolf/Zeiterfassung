@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Entity.Design" />
     <Reference Include="System.Xml.Linq" />
@@ -67,6 +68,9 @@
       <Project>{67ef274a-e72f-46e5-967d-b3cef85e9d23}</Project>
       <Name>DatenhaltungSerialisierung</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

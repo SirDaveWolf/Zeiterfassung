@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Projektarbeit.GeschaeftslogikWebservice.Implementierung.TimeRegistrationService" CodeBehind="TimeRegistrationService.svc.cs" %>

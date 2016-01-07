@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projektarbeit.DatenhaltungSerialisierung.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,9 +13,9 @@ namespace Projektarbeit.GeschaeftslogikWebservice.Interfaces
     public interface IUserAccessService
     {
         [OperationContract]
-        Guid Login(String username, String password);
+        IUser Login(String username, String password);
 
         [OperationContract]
-        Boolean Logout(Guid userIdentification);
+        IUser Logout(Guid userIdentification);
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Projektarbeit.GeschaeftslogikDLL.Implementierung;
 
 namespace Projektarbeit
 {
@@ -76,6 +77,8 @@ namespace Projektarbeit
                     String password = passwordBox.Password;
 
                     // hier anmelden via webservice
+                    
+                    
 
                     loginWindow.DialogResult = true;
                     loginWindow.Close();

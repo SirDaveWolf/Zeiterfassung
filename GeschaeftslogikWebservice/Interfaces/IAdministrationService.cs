@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Projektarbeit.DatenhaltungSerialisierung.Model;
 
 namespace Projektarbeit.GeschaeftslogikWebservice.Interfaces
 {
@@ -12,20 +13,20 @@ namespace Projektarbeit.GeschaeftslogikWebservice.Interfaces
     public interface IAdministrationService
     {
         [OperationContract]
-        Boolean UpdateUser ( User user );
+        IUser UpdateUser ( IUser user );
         [OperationContract]
-        Boolean DeleteUser ( User user );
+        IUser DeleteUser ( IUser user );
         [OperationContract]
-        Boolean UpdateProject ( Project project );
+        IProject UpdateProject ( IProject project );
         [OperationContract]
-        Boolean DeleteProject ( Project project );
+        IProject DeleteProject ( IProject project );
         [OperationContract]
-        Boolean PermitUserForProject ( String mail, String projectName );
+        IUser PermitUserForProject ( String mail, String projectName );
         [OperationContract]
-        Boolean DenyUserForProject ( String mail, String projectName );
+        IUser DenyUserForProject ( String mail, String projectName );
         [OperationContract]
-        List<User> GetUsers ();
+        List<IUser> GetUsers ();
         [OperationContract]
-        List<Project> GetProjects ();
+        List<IProject> GetProjects ();
     }
 }

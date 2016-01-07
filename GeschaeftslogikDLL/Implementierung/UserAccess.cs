@@ -34,14 +34,14 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
             return true;
         }
 
-        Guid IUserAccess.Login(string mail, string password)
+        IUser IUserAccess.Login(string mail, string password)
         {
             throw new NotImplementedException();
         }
 
-        public bool Logout(Guid userIdentification)
+        public bool Logout(string mail)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
