@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Projektarbeit.DatenhaltungSerialisierung.Model;
+
 
 namespace Projektarbeit.TUI
 {
@@ -127,14 +129,14 @@ namespace Projektarbeit.TUI
             Console.Clear();
             Console.WriteLine("Zeiterfassung");
             Console.WriteLine("Bitte ein Projekt auswählen: ");
-            Int32 enumerator = 0;
-            /*foreach( var project in Projects )
+            /* Int32 enumerator = 0;
+            foreach( var project in Projects )
                 {
                     Console.WriteLine( "{0} - {1}", enumerator++, project.ShortDescription );
                 }
             Int32 input = Convert.ToInt32( Console.ReadLine() );
-            var selectedProject = Projects[ input ];*/
-
+            var selectedProject = Projects[ input ];
+            */
             Console.WriteLine("Um welche Uhrzeit wurde mit der Arbeit begonnen?");
             var anfang = DateTime.Parse(Console.ReadLine());
             Console.WriteLine("Ist diese Zeit abrechenbar [j/n] ?");
@@ -222,21 +224,21 @@ namespace Projektarbeit.TUI
         {
             Console.Clear();
             Console.WriteLine("Einen Mitarbeiter bearbeiten");
-            Int32 enumerator = 0;
-            /*foreach (var mitarbeiter in Mitarbeiter)
+            /*Int32 enumerator = 0;
+            foreach (var mitarbeiter in Mitarbeiter)
             {
                 Console.WriteLine("{0} - {1}", enumerator++, mitarbeiter.Name);
             }
             Int32 input = Convert.ToInt32(Console.ReadLine());
-            var selectedMitarbeiter = Mitarbeiter[input];*/
-
+            var selectedMitarbeiter = Mitarbeiter[input];
+            */
             //Datenbank - dazugehörigen Datensatz laden
-            Console.WriteLine("1 " + user.Name);
-            Console.WriteLine("2 " + user.Vorname);
-            Console.WriteLine("3 " + user.EMail);
-            Console.WriteLine("4 " + user.Passwort);
-            Console.WriteLine("5 " + user.MinArbeitszeit);
-            Console.WriteLine("6 " + user.IstAdmin);
+            Console.WriteLine("1 " );
+            Console.WriteLine("2 " );
+            Console.WriteLine("3 " );
+            Console.WriteLine("4 " );
+            Console.WriteLine("5 " );
+            Console.WriteLine("6 " );
             Console.WriteLine("");
             Console.WriteLine("Bitte wählen Sie aus was geändert werden soll: ");
             var auswahlChanges = Console.ReadLine();
@@ -372,7 +374,7 @@ namespace Projektarbeit.TUI
         {
             Console.Clear();
             Console.WriteLine("Ein Projekt bearbeiten");
-            Int32 enumerator = 0;
+            //Int32 enumerator = 0;
             /*foreach (var project in Projects)
             {
                 Console.WriteLine("{0} - {1}", enumerator++, project.ShortDescription);
@@ -381,9 +383,9 @@ namespace Projektarbeit.TUI
             var selectedProject = Projects[input];*/
 
             //Datenbank - dazugehörigen Datensatz laden
-            Console.WriteLine("1 " + project.Bezeichnung);
-            Console.WriteLine("2 " + project.Kurzbeschreibung);
-            Console.WriteLine("3 " + project.MaxStundensatz);
+            Console.WriteLine("1 ");
+            Console.WriteLine("2 " );
+            Console.WriteLine("3 " );
             Console.WriteLine("");
             Console.WriteLine("Bitte wählen Sie aus was geändert werden soll: ");
             var auswahlChanges = Console.ReadLine();

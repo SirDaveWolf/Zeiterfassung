@@ -8,22 +8,22 @@ namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
     public interface IUser
     {
-        public
+        
         String Name { get; set; }
 
-        public
+        
         String Vorname { get; set; }
 
-        public
+        
         String EMail { get; set; }
 
-        public
+        
         String Passwort { get; set; }
 
-        public
+        
         Single MinArbeitszeit { get; set; }
 
-        public
+        
         Boolean IstAdmin { get; set; }
     }
 }

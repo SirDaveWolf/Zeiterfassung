@@ -29,17 +29,23 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
             return dataManagement.AssignWorkTimeToUser( userMail, workTime.Id, projectDescription );
         }
 
-        public List<IWorkTime> GetMyTimesForProject ( string userMail, string projectName )
+        public Dictionary <string, List<IWorkTime>> GetMyTimesForProject ( string userMail, string projectName )
         {
             return dataManagement.GetMyTimesForProject( userMail, projectName );
         }
-
+     
         public Dictionary<string, List<IWorkTime>> GetMyWorkTimes ( string userMail )
         {
             throw new NotImplementedException();
         }
 
         public List<IProject> GetMyProjects ( string userMail )
+        {
+            throw new NotImplementedException();
+        }
+
+
+        List<IWorkTime> ITimeRegistration.GetMyTimesForProject(string userMail, string projectName)
         {
             throw new NotImplementedException();
         }

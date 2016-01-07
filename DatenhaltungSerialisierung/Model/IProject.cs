@@ -8,13 +8,13 @@ namespace Projektarbeit.DatenhaltungSerialisierung.Model
 {
     public interface IProject
     {
-        public
+        
         String Bezeichnung { get; set; }
 
-        public
+        
         String Kurzbeschreibung { get; set; }
 
-        public
+        
         Single MaxStundensatz { get; set; }
     }
 }

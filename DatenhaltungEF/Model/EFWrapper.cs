@@ -172,7 +172,7 @@ namespace Projektarbeit.DatenhaltungEF.Model
         {
             Dictionary<string, List<IWorkTime>> result = new Dictionary<String, List<IWorkTime>>();
 
-            var workTimes = database.WorkTimes.Where( o => o.User.EMail == mail );
+            var workTimes = database.WorkTimes.Where( o => o.User.EMail == EMail );
 
             foreach ( var item in workTimes )
             {
@@ -217,15 +217,21 @@ namespace Projektarbeit.DatenhaltungEF.Model
             return result;
         }
 
-        public List<IWorkTime> GetMyWorkTimes ( string mail )
+        public List<IWorkTime> GetMyWorkTimes ( string mail, string description )
         {
-            var myWorkTimes = database.WorkTimes.Where( o => o.User.EMail == EMail && o.Project.Kurzbeschreibung == description );
+            var myWorkTimes = database.WorkTimes.Where( o => o.User.EMail == mail && o.Project.Kurzbeschreibung == description );
 
             List<IWorkTime> result = new List<IWorkTime>();
             foreach ( var item in myWorkTimes )
                 result.Add( ( IWorkTime )item );
 
             return result;
+        }
+
+
+        public List<IWorkTime> GetMyWorkTimes(string mail)
+        {
+            throw new NotImplementedException();
         }
     }
 }
