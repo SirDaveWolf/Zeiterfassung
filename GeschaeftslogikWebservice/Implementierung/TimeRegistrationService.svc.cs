@@ -36,22 +36,19 @@ namespace Projektarbeit.GeschaeftslogikWebservice.Implementierung
             return dataManagement.GetMyTimesForProject(userMail, projectName);
         }
 
-        public Dictionary<String, List<DatenhaltungEF.Model.WorkTime>> GetMyWorkTimes(String userMail)
+        public Dictionary <string, List<IWorkTime>> GetMyWorkTimes(String userMail)
         {
-            throw new NotImplementedException();
-            //HÖÖÖÖ???
+            return dataManagement.GetMyWorkTimes(mail);
         }
 
         public List<IProject> GetMyProjects(String userMail)
         {
-            throw new NotImplementedException();
-            //HÄÄÄÄÄÄÄ????
+            return dataManagement.GetMyProjects(userMail);
         }
 
-        public List<IWorkTime> GetMyTimesForProject(string userMail, string projectName)
+        public List<IWorkTime> GetMyTimesForProject(String userMail, String projectName)
         {
-            throw new NotImplementedException();
-            //HMMMM???
+            return dataManagement.GetMyTimesForProject(userMail, projectName);
         }
     }
 }

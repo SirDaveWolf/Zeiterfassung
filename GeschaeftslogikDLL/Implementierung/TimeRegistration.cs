@@ -44,7 +44,6 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
             throw new NotImplementedException();
         }
 
-
         List<IWorkTime> ITimeRegistration.GetMyTimesForProject(string userMail, string projectName)
         {
             throw new NotImplementedException();

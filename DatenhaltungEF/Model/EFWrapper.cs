@@ -168,15 +168,28 @@ namespace Projektarbeit.DatenhaltungEF.Model
             return true;
         }
 
-        public Dictionary<string, List<IWorkTime>> GetMyTimesForProject ( string EMail, string description )
+
+        public Dictionary<string, List<IWorkTime>> GetMyTimesForProject(string EMail, string description)
         {
             Dictionary<string, List<IWorkTime>> result = new Dictionary<String, List<IWorkTime>>();
 
-            var workTimes = database.WorkTimes.Where( o => o.User.EMail == EMail );
+            var workTimes = database.WorkTimes.Where(o => o.User.EMail == EMail);
+            var projects = database.Projects.Where(o => o.Kurzbeschreibung == description);
 
-            foreach ( var item in workTimes )
+            foreach (var project in projects)
             {
+                List<IWorkTime> workTimeList = new List<IWorkTime>();
 
+                foreach (var item in workTimes)
+                {
+                    if (item.Project.Kurzbeschreibung == project.Kurzbeschreibung)
+                    {
+                        workTimeList.Add((IWorkTime)item);
+                    }
+                }
+
+                if (workTimeList.Count > 0)
+                    result.Add(project.Kurzbeschreibung, workTimeList);
             }
 
             return result;
