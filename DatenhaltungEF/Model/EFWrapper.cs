@@ -241,10 +241,5 @@ namespace Projektarbeit.DatenhaltungEF.Model
             return result;
         }
 
-
-        public List<IWorkTime> GetMyWorkTimes(string mail)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -34,9 +34,9 @@ namespace Projektarbeit.GeschaeftslogikDLL.Implementierung
             return dataManagement.GetMyTimesForProject( userMail, projectName );
         }
      
-        public Dictionary<string, List<IWorkTime>> GetMyWorkTimes ( string userMail )
+        public List<IWorkTime> GetMyWorkTimes ( string userMail )
         {
-            throw new NotImplementedException();
+            return dataManagement.GetMyWorkTimes(userMail);
         }
 
         public List<IProject> GetMyProjects ( string userMail )

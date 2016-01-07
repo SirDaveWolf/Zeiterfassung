@@ -36,9 +36,9 @@ namespace Projektarbeit.GeschaeftslogikWebservice.Implementierung
             return dataManagement.GetMyTimesForProject(userMail, projectName);
         }
 
-        public Dictionary <string, List<IWorkTime>> GetMyWorkTimes(String userMail)
+        public List<IWorkTime> GetMyWorkTimes(String userMail)
         {
-            return dataManagement.GetMyWorkTimes(mail);
+            return dataManagement.GetMyWorkTimes(userMail);
         }
 
         public List<IProject> GetMyProjects(String userMail)
@@ -46,9 +46,5 @@ namespace Projektarbeit.GeschaeftslogikWebservice.Implementierung
             return dataManagement.GetMyProjects(userMail);
         }
 
-        public List<IWorkTime> GetMyTimesForProject(String userMail, String projectName)
-        {
-            return dataManagement.GetMyTimesForProject(userMail, projectName);
-        }
     }
 }

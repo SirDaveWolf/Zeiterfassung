@@ -1,4 +1,7 @@
 ﻿using Projektarbeit.GeschaeftslogikWebservice.Interfaces;
+using Projektarbeit.DatenhaltungSerialisierung.Utilities;
+using Projektarbeit.DatenhaltungSerialisierung.Model;
+using Projektarbeit.DatenhaltungEF.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,44 +13,56 @@ namespace Projektarbeit.GeschaeftslogikWebservice.Implementierung
 {
     public class AdministrationService : IAdministrationService
     {
-        public bool UpdateUser ( DatenhaltungEF.Model.User user )
+
+        private
+        IDataFileManagement dataManagement;
+
+        public AdministrationService ( DataManagementType type )
         {
-            throw new NotImplementedException();
+            if ( type == DataManagementType.EntityFramework )
+                dataManagement = new EFWrapper();
+
+            if ( type == DataManagementType.Json )
+                dataManagement = new DataFileManagement();
+        }
+        public bool UpdateUser ( IUser user )
+        {
+            return dataManagement.WriteUser(user);
         }
 
-        public bool DeleteUser ( DatenhaltungEF.Model.User user )
+        public bool DeleteUser ( IUser user )
         {
-            throw new NotImplementedException();
+            return dataManagement.DeleteUser(user.EMail);
         }
 
-        public bool UpdateProject ( DatenhaltungEF.Model.Project project )
+        public bool UpdateProject ( IProject project )
         {
-            throw new NotImplementedException();
+            return dataManagement.WriteProject(project);
         }
 
-        public bool DeleteProject ( DatenhaltungEF.Model.Project project )
+        public bool DeleteProject ( IProject project )
         {
-            throw new NotImplementedException();
+            return dataManagement.DeleteProject(project.Kurzbeschreibung);
         }
 
         public bool PermitUserForProject ( string mail, string projectName )
         {
-            throw new NotImplementedException();
+            return dataManagement.PermitUserToProject(mail, projectName);
         }
 
         public bool DenyUserForProject ( string mail, string projectName )
         {
-            throw new NotImplementedException();
+            return dataManagement.DenyUserToProject(mail, projectName);
         }
 
-        public List<DatenhaltungEF.Model.User> GetUsers ()
+        public List<IUser> GetUsers ()
         {
-            throw new NotImplementedException();
+            return dataManagement.GetAllUsers();
         }
 
-        public List<DatenhaltungEF.Model.Project> GetProjects ()
+        public List<IProject> GetProjects ()
         {
-            throw new NotImplementedException();
+            return dataManagement.GetAllProjects();
         }
     }
 }
